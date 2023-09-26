@@ -10,4 +10,13 @@ router.get("/", (req, res, next) => {
     }
 });
 
+router.get("/:id", (req, res, next) => {
+    try{
+        res.json('hello from appetizers id');     
+    }
+    catch(err){
+        next(err);
+    }
+});
+
 module.exports = router;
